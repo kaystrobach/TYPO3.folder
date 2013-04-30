@@ -1,0 +1,17 @@
+plugin.tx_folder {
+	view {
+		templateRootPath = {$plugin.tx_folder.view.templateRootPath}
+		partialRootPath = {$plugin.tx_folder.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_folder.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_folder.persistence.storagePid}
+	}
+}
+
+plugin.tx_folder._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+)

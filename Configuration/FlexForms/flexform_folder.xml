@@ -1,0 +1,54 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+
+	<sheets>
+		<!--
+			################################
+			  SHEET General Settings
+			################################
+		-->
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:folder/Resources/Private/Language/locallang.xml:flexforms_tab.settings</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.path>
+						<TCEforms>
+							<label>LLL:EXT:folder/Resources/Private/Language/locallang.xml:flexforms_general.path</label>
+							<config>
+								<checkbox>1</checkbox>
+								<default></default>
+								<type>input</type>
+								<size>55</size>
+							</config>
+						</TCEforms>
+					</settings.path>
+					<settings.extensionList>
+						<TCEforms>
+							<label>LLL:EXT:folder/Resources/Private/Language/locallang.xml:flexforms_general.extensionList</label>
+							<config>
+								<checkbox>1</checkbox>
+								<default></default>
+								<type>input</type>
+								<size>25</size>
+							</config>
+						</TCEforms>
+					</settings.extensionList>
+					<settings.debug>
+						<TCEforms>
+							<label>LLL:EXT:folder/Resources/Private/Language/locallang.xml:flexforms_general.debug</label>
+							<config>
+								<default></default>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.debug>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

@@ -1,0 +1,121 @@
+{namespace fol=Tx_Folder_ViewHelpers}
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+<f:flashMessages />
+
+
+
+	<table  class="contenttable tx_folder">
+		<thead>
+			<tr class="tr-even tr-0">
+				<th>
+					<f:if condition="{topFolderId}">
+						<f:link.action action="list" arguments="{folderMd5 : topFolderId}">
+							<img src="typo3/gfx/turn_up.gif" />
+						</f:link.action>
+					</f:if>
+				</th>
+				<th>
+					<f:translate key="view.name" />
+				</th>
+				<th>
+					<f:translate key="view.size" />
+				</th>
+				<th>
+					<f:translate key="view.crtime" />
+				</th>
+				<th>
+					<f:translate key="view.mtime" />
+				</th>
+			</tr>
+		</thead>
+
+		<f:for each="{folders}" as="folder" key="folderId">
+			<tr>
+				<td>
+					<img src="typo3/gfx/fileicons/folder.gif" />
+				</td>
+				<td>
+					<f:link.action action="list" arguments="{folderMd5 : folderId}">
+						<fol:charset>
+							<fol:basename value="{folder}" />
+						</fol:charset>
+					</f:link.action>
+				</td>
+				<td>
+
+				</td>
+				<td>
+					<fol:crtime value="{folder}" />
+				</td>
+				<td>
+					<fol:mtime value="{folder}" />
+				</td>
+			</tr>
+		</f:for>
+
+		<tr>
+			<td colspan="5">
+			</td>
+		</tr>
+
+		<f:for each="{files}" as="file" key="fileId">
+			<tr>
+				<td>
+					<f:link.action action="download" arguments="{fileMd5 : fileId}">
+						<img src="{fol:fileicon(value:file)}" alt=""/>
+					</f:link.action>
+				</td>
+				<td>
+					<f:link.action action="download" arguments="{fileMd5 : fileId}">
+						<fol:charset>
+							<fol:basename value="{file}" />
+						</fol:charset>
+					</f:link.action>
+				</td>
+				<td>
+					<fol:size value="{file}" />
+				</td>
+				<td>
+					<fol:crtime value="{file}" />
+				</td>
+				<td>
+					<fol:mtime value="{file}" />
+				</td>
+			</tr>
+		</f:for>
+		<tr>
+			<td></td>
+			<td>
+				<img src="typo3/gfx/savesnapshot.gif" alt="" />
+				<f:link.action action="zipdownload" arguments="{fileMd5 : currentFolderId}">
+					<f:translate key="view.download_as_zip" />
+				</f:link.action>
+			</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<f:if condition="{settings.debug}">
+		<f:debug>{settings}</f:debug>
+		<f:debug>{allowedItems}</f:debug>
+	</f:if>
+
+
+</f:section>

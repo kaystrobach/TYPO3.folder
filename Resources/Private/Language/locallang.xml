@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Folder extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_folder_domain_model_folder">Folder</label>
+			<label index="tx_folder_domain_model_folder.name">name</label>
+			<label index="tx_folder_domain_model_folder.realpath">realpath</label>
+			<label index="view.name">Name</label>
+			<label index="view.crtime">Creatingtime</label>
+			<label index="view.mtime">Modificationtime</label>
+			<label index="view.size">Size</label>
+			<label index="view.download_as_zip">Download as Zip</label>
+			<label index="flexforms_general.path">path</label>
+			<label index="flexforms_tab.settings">settings</label>
+			<label index="flexforms_general.extensionList">list of allowed extensions</label>
+			<label index="flexforms_general.order">order</label>
+			<label index="flexforms_general.debug">Enable Debug?</label>
+		</languageKey>
+
+		<languageKey index="de" type="array">
+			<label index="tx_folder_domain_model_folder">Ordner</label>
+			<label index="tx_folder_domain_model_folder.name">Name</label>
+			<label index="tx_folder_domain_model_folder.realpath">realer Pfad</label>
+			<label index="view.name">Name</label>
+			<label index="view.crtime">Erzeugungszeit</label>
+			<label index="view.mtime">Änderungszeit</label>
+			<label index="view.size">Größe</label>
+			<label index="view.download_as_zip">Als Zip herunterladen</label>
+			<label index="flexforms_general.path">Pfad</label>
+			<label index="flexforms_tab.settings">Einstellungen</label>
+			<label index="flexforms_general.extensionList">Liste der erlaubten Dateiendungen</label>
+			<label index="flexforms_general.order">Sortierung</label>
+			<label index="flexforms_general.debug">Aktiviere Debugausgabe?</label>
+		</languageKey>
+	</data>
+</T3locallang>
