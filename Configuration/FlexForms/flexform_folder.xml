@@ -38,15 +38,15 @@
 							</config>
 						</TCEforms>
 					</settings.extensionList>
-					<settings.enableZipDownload>
+					<settings.disableZipDownload>
 						<TCEforms>
-							<label>LLL:EXT:folder/Resources/Private/Language/locallang.xml:flexforms_general.enableZipDownload</label>
+							<label>LLL:EXT:folder/Resources/Private/Language/locallang.xml:flexforms_general.disableZipDownload</label>
 							<config>
 								<default>1</default>
 								<type>check</type>
 							</config>
 						</TCEforms>
-					</settings.enableZipDownload>
+					</settings.disableZipDownload>
 					<settings.debug>
 						<TCEforms>
 							<label>LLL:EXT:folder/Resources/Private/Language/locallang.xml:flexforms_general.debug</label>

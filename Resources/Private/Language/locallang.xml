@@ -19,7 +19,7 @@
 			<label index="flexforms_general.extensionList">list of allowed extensions</label>
 			<label index="flexforms_general.order">order</label>
 			<label index="flexforms_general.debug">Enable Debug?</label>
-			<label index="flexforms_general.enableZipDownload">Enable Zip Download?</label>
+			<label index="flexforms_general.hideZipDownload">Disable Zip Download?</label>
 		</languageKey>
 
 		<languageKey index="de" type="array">
@@ -36,7 +36,7 @@
 			<label index="flexforms_general.extensionList">Liste der erlaubten Dateiendungen</label>
 			<label index="flexforms_general.order">Sortierung</label>
 			<label index="flexforms_general.debug">Aktiviere Debugausgabe?</label>
-			<label index="flexforms_general.enableZipDownload">Aktiviere Zip Download?</label>
+			<label index="flexforms_general.hideZipDownload">Deaktiviere Zip Download?</label>
 		</languageKey>
 	</data>
 </T3locallang>

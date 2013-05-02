@@ -98,19 +98,24 @@ Otherwise your changes will be overwritten the next time you save the extension 
 				</td>
 			</tr>
 		</f:for>
-		<f:if condition="{settings.enableZipDownload}">
-			<tr>
-				<td></td>
-				<td>
-					<img src="typo3/gfx/savesnapshot.gif" alt="" />
-					<f:link.action action="zipdownload" arguments="{fileMd5 : currentFolderId}">
-						<f:translate key="view.download_as_zip" />
-					</f:link.action>
-				</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
+		<f:if condition="{settings.hideZipDownload}">
+			<f:then>
+
+			</f:then>
+			<f:else>
+				<tr>
+					<td></td>
+					<td>
+						<img src="typo3/gfx/savesnapshot.gif" alt="" />
+						<f:link.action action="zipdownload" arguments="{fileMd5 : currentFolderId}">
+							<f:translate key="view.download_as_zip" />
+						</f:link.action>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</f:else>
 		</f:if>
 	</table>
 
