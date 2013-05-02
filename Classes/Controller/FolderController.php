@@ -164,8 +164,8 @@ class Tx_Folder_Controller_FolderController extends Tx_Extbase_MVC_Controller_Ac
 			$zip->close();
 			header('Content-Type: application/octet-stream');
 			header('Content-Disposition: attachment; filename="' . basename($path) . '.zip"');
-			header('Content-Length: ' . filesize($path));
-			header('Content-Transfer-Encoding: binary');
+			#header('Content-Length: ' . filesize($path));
+			#header('Content-Transfer-Encoding: binary');
 			readfile($zipFileName);
 			unlink($zipFileName);
 			die();
@@ -174,4 +174,3 @@ class Tx_Folder_Controller_FolderController extends Tx_Extbase_MVC_Controller_Ac
 		}
 	}
 }
-?>
