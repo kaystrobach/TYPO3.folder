@@ -157,6 +157,10 @@ class Tx_Folder_Controller_FolderController extends Tx_Extbase_MVC_Controller_Ac
 			foreach($this->allowedItems as $item) {
 				if(substr($item, 0, strlen($path)) == $path) {
 					if(is_file($item)) {
+						//avoid slash at the beginning of the path in the archive, can be a problem if trailing slash is missing
+						if(substr($path, 0, 1) === '/') {
+							$path = substr($path, 1);
+						}
 						$zip->addFile($item, str_replace($path, '', $item));
 					}
 				}
